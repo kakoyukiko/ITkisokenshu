@@ -1,6 +1,7 @@
 # 加古のwebページを再現するための手順書
 ## 前提
    + Git/GitHubはインストール、登録済み
+   + Dockerはインストール済み
 
 ## 手順
    1. GitHubの[kako/ITkisokenshu](https://github.com/kakoyukiko/ITkisokenshu)リポジトリを開く。<br>
