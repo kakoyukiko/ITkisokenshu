@@ -1,4 +1,4 @@
-# 加古のwebページを再現するための手順書
+# KAKO's websiteを再現するための手順書
 ## リポジトリの内容物
    + 手順書（README.md）
    + index.htmlファイル
