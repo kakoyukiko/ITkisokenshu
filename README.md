@@ -11,6 +11,7 @@
    + Git/GitHubはインストール、登録済み
    + Dockerはインストール済み
    + dockerデーモンが立ち上がっている
+   + （必要なら）いつでもリモート環境にアクセスできる
 
 ## 手順
    1. GitHubの[kako/ITkisokenshu](https://github.com/kakoyukiko/ITkisokenshu)リポジトリを開く。<br>
@@ -20,6 +21,8 @@
    3. 「A」をcloneするためのURLをコピーする <br>
       `git@github.com:username/ITkisokenshu.git` <br>
       * 上記の場合、SSHkey認証のクローンである。自身の認証方法に応じてHTTPS, SSH, GitHub CLIのいずれかのURLを選ぶ。<br>
+      必要なら[この記事](https://docs.github.com/ja/repositories/creating-and-managing-repositories/cloning-a-repository) を参考に 
+      <br>
 
    4. 「A」を `git clone git@github.com:username/ITkisokenshu.git`でローカル上の自身の作業したいディレクトリにcloneする <br>
       
@@ -55,10 +58,10 @@
        |-d|バックグラウンドでの起動|
        <br>
    
-   8. webブラウザで`http://52.194.188.6:20089/`にアクセスし、作成したHTMLファイルが表示されるのかを確認
+   8. webブラウザで`http://global_IP_address:port_number/`にアクセスし、作成したHTMLファイルが表示されるのかを確認
 
    + もしエラーが起こっているなら以下のことを確認する
        + ファイルの他ユーザーの権限は読み取りOKになっているか？
        + ファイルが入っているディレクトリの権限は実行OKになっているか？
        + Dockerコンテナをリモート環境に立てたならリモート環境に、ローカルに立てたならローカルにcloneしてきたリポジトリは置かれているか？
-       + 
+      
