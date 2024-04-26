@@ -37,6 +37,7 @@
       ```
       <br>
 
+      command memo
       + `-r`でディレクトリごとコピーできる
       + `/path/to/repository` 今のリポジトリまでのパス
       + @の後ろはグローバルIPアドレス
