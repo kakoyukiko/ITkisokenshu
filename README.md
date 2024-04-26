@@ -68,5 +68,7 @@
          →権限については[この記事](https://qiita.com/shisama/items/5f4c4fa768642aad9e06)を参考に。
        + Dockerコンテナをリモート環境に立てたならリモート環境に、ローカルに立てたならローカルにcloneしてきたリポジトリは置かれているか？<br>
          →手順6. を振り返る
+
+   わからないことは[こちらのサイト](https://github.com/btiyf/tutorial/tree/main/docs/study_logs)がおすすめ。
        
       
