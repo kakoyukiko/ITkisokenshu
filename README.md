@@ -4,7 +4,7 @@
    + index.htmlファイル
    + css > style.css
    + js > script.js
-   + images > 使用した7枚の写真ファイル
+   + images > 使用した7枚の写真ファイル (.jpg .png)
    <br>
 
 ## 前提
