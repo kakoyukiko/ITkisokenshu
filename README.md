@@ -21,12 +21,24 @@
       `git@github.com:username/ITkisokenshu.git` <br>
       * 上記の場合、SSHkey認証のクローンである。自身の認証方法に応じてHTTPS, SSH, GitHub CLIのいずれかのURLを選ぶ。<br>
 
-   4. 「A」を `git clone git@github.com:username/ITkisokenshu.git`で自身の作業したい場所にcloneする <br>
+   4. 「A」を `git clone git@github.com:username/ITkisokenshu.git`でローカル上の自身の作業したいディレクトリにcloneする <br>
       
    5. docker imageにnginxがあることを `docker images` で確認する <br>
       なかったらpullする `docker pull nginx` <br>
+   
+   6. Dockerを立てている環境（ローカル・リモート）にcloneしたリポジトリがあるか確認する。<br>
+      もしなかった場合、Dockerを立てている環境にコピーする <br>
+      以下のコードは、ローカルからリモートにコピーするときのコマンド
+      ```
+      scp -i ~/path/to/ssh/key/~.pem -r /path/to/repository username@00.000.000.00:/path/to/where/you/wanna/put/
+      ```
+      <br>
 
-   6. dockerでnginxコンテナを作成&作成したHTMLがwebサーバ（nginx）で返せるようにする
+      + `-r`でディレクトリごとコピーできる
+      + @の後ろはグローバルIPアドレス
+      <br>
+
+   7. dockerでnginxコンテナを作成&作成したHTMLがwebサーバ（nginx）で返せるようにする
        ```
        docker run --name containername -p 00000:80 -v /path/to/index.html:/usr/share/nginx/html:ro -d nginx
        ```
@@ -43,9 +55,10 @@
        |-d|バックグラウンドでの起動|
        <br>
    
-   7. webブラウザで`http://52.194.188.6:20089/`にアクセスし、作成したHTMLファイルが表示されるのかを確認
-   
+   8. webブラウザで`http://52.194.188.6:20089/`にアクセスし、作成したHTMLファイルが表示されるのかを確認
+
    + もしエラーが起こっているなら以下のことを確認する
        + ファイルの他ユーザーの権限は読み取りOKになっているか？
        + ファイルが入っているディレクトリの権限は実行OKになっているか？
        + Dockerコンテナをリモート環境に立てたならリモート環境に、ローカルに立てたならローカルにcloneしてきたリポジトリは置かれているか？
+       + 
